@@ -1,1 +1,6 @@
 
+# setupVaspcalc_0 contains all scripts useful to create input files for VASP:
+
+# check_sym , FixAtoms_slab.py,FixAtoms_struct, getKsp,makeslab,makesupercell,vasp2cml and vasp2pbd.
+
+So far I have been using the two different materials : Silicon and silica therefore some scripts like FixAtoms_slab
