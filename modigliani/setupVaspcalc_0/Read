@@ -1,6 +1,14 @@
 
-# setupVaspcalc_0 contains all scripts useful to create input files for VASP:
+# setupVaspcalc_0 contains all scripts useful to set vasp calculations
 
-# check_sym , FixAtoms_slab.py,FixAtoms_struct, getKsp,makeslab,makesupercell,vasp2cml and vasp2pbd.
+# check_sym , FixAtoms_slab.py,FixAtoms_struct, getKsp,makeslab,makesupercell,vasp2cml, vasp2pbd. Install ase and pymatgen on
+# your python.
 
-So far I have been using the two different materials : Silicon and silica therefore some scripts like FixAtoms_slab
+So far I have been using the two different materials silicon and silica therefore some script might have written taking into
+account this fact. If you need to use FixAtoms_slab and FixAtoms_struct for example changes some lines based on your needs.
+
+What are useful for the script? What's the idea behind them?
+
+# check_sym     -> Detect space group of a certain structure. Usage: python3 check_sym CONTCAR (or POSCAR)
+
+# FixAtoms_slab.py ->  
