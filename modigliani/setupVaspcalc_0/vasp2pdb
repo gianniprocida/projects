@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# This script is necessary to do to following operation: VASP -> cif -> pdb 
+# pdb file is can be opened by avogadro. It takes as input: VASP file and a string which identifies the molecule or whatever it is
+echo "$1" "$2"
+ase convert "$1" "$2".cif
+ase convert "$2".cif "$2".pdb
+avogadro "$2".pdb
+rm "$2".cif
+
+
+
+

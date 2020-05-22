@@ -1,0 +1,10 @@
+#! /bin/bash
+# A script which takes as input a file (it could be file a vasp file) and a string (in any format) and converts that file into cml format.
+echo "$1" "$2"
+ase convert "$1" "$2".cif
+babel -icif "$2".cif -ocml "$2".cml
+
+sudo cp "$2".cml /usr/share/avogadro/fragments/
+
+
+
