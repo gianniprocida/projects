@@ -19,6 +19,6 @@ going to fix non-H atoms i.e. above upper_limit_z atoms will be free to relax. I
 physisorbed species ). 
 e.g python3 FixAtoms_struct vaspfile 6. ->  It's going to fix all atoms below 6 Angstrom
 6 is the upper limit. It is expressed in cartesian coordinates and the maximum limit where the method FixAtoms is 
-# going to fix atoms i.e. above upper_limit_z atoms will be free to relax. The only difference between FixAtoms_slab is that 
-# H atoms at the bottom are kept fix here. 
+ going to fix atoms i.e. above upper_limit_z atoms will be free to relax. The only difference between FixAtoms_slab is that 
+ H atoms at the bottom are kept fix here. 
 
