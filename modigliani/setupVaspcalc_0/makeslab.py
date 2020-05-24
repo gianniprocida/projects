@@ -21,16 +21,13 @@ cell_parameters=atoms.get_cell_lengths_and_angles()
 Si8=Atoms('Si8',scaled_positions=xyz,cell=cell_parameters,pbc=True)
 
 
-import pdb;pdb.set_trace()
+# Chose a surface :e.g. Si(111). The second number is the number of layer
 
-# Define slab
 
-# We cut along 100 because , it doesn't change the structure
-
-slab100=surface(Si8,(0,0,1),3)
+slab100=surface(Si8,(1,0,0),3)
  
 slab100.center(vacuum=9,axis=2)
 
-ase.io.write('POSCAR_001',slab100)
+ase.io.write('POSCAR_100',slab100)
 
 

@@ -16,6 +16,7 @@ struc = read(sys.argv[1],format='vasp')
 P = np.array([[1,0,0],[0,1,0],[0,0,1/2]])*2
 gra1 = make_supercell(struc, P)
 
+
 #After the lattice transformation
 #the supercell might have unpleasant shape such as 
 #[ 0, -1, 0]
