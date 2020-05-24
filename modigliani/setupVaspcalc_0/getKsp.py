@@ -10,7 +10,9 @@ from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 
 #These should be a simple static calculation. Make sure that each of the calculations finishes successfully, otherwise you will not be able to compare results and check convergence.
 
-#2) KPOINTS : Make 
+#2) KPOINTS : Once you have the ideal cutoff, you need to find out the number of kpoint at which the energy and the lattice
+# parameters converge.
+# Here since we need to do slab calculations, it's important to find out the KSPACING as well. 
 # It's important to get KSPACING out of the 
 # We assume that structure reaches convergence at 5x5x5 kpoints within a range of 0.001 Angstrom and
 # the energy reaches convergence at 12x12x12 kpoints within a range 0f 0.0001 eV ( for quartz )
