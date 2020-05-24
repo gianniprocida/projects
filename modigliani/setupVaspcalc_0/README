@@ -1,0 +1,26 @@
+
+# setupVaspcalc_0 contains all scripts useful to set vasp calculations
+
+# check_sym , FixAtoms_slab.py,FixAtoms_struct, getKsp,makeslab,makesupercell,vasp2cml, vasp2pbd. Install ase and pymatgen on
+# your python.
+
+So far I have been using the two different materials silicon and silica therefore some script might have been written taking into
+account this fact. If you need to use FixAtoms_slab and FixAtoms_struct for other structures change some lines based on your needs.
+
+
+# check_sym     -> Detect space group of a certain structure. Usage: python3 check_sym CONTCAR (or POSCAR)
+
+# FixAtoms_slab.py ->  Freeze atoms for slab relaxation
+e.g. python3 FixAtoms_slab vaspfile 6 -> It's going to fix all  non-hydrogen atoms below 6 Angstrom
+6 is the upper_limit_z. It is expressed in cartesian coordinates and represents the maximum limit where the method FixAtoms is 
+going to fix non-H atoms i.e. above upper_limit_z atoms will be free to relax. In addition also H atoms at the bottom will be free to relax.  
+
+# FixAtoms_struct ->  Freeze atoms for slab relaxation. ( FixAtoms was created for freezing atoms in chemisorbed  and
+physisorbed species ). 
+e.g python3 FixAtoms_struct vaspfile 6. ->  It's going to fix all atoms below 6 Angstrom
+6 is the upper limit. It is expressed in cartesian coordinates and the maximum limit where the method FixAtoms is 
+ going to fix atoms i.e. above upper_limit_z atoms will be free to relax. 
+
+# makesupercell -> Make a supercell. Change the diagonal element in transformation matrix based on your needs 
+
+# vasp2cml -> 
